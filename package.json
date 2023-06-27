@@ -1,12 +1,12 @@
 {
-    "version":"0.1.0",
+    "version":"0.2.0",
     "license":"MIT",
     "main":"dist/index.js",
     "typings":"dist/index.d.ts",
     "files":["dist","src"],
     "engines":{"node":">=10"},
     "scripts":{
-        "start":"tsdx watch",
+        "start": "tsdx watch",
         "build":"tsdx build",
         "test":"tsdx test --passWithNoTests",
         "lint":"tsdx lint",
