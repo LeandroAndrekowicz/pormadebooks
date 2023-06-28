@@ -6,7 +6,7 @@
     "files":["dist","src"],
     "engines":{"node":">=10"},
     "scripts":{
-        "start": "tsdx watch",
+        "start": "start-storybook -p 6006",
         "build":"tsdx build",
         "test":"tsdx test --passWithNoTests",
         "lint":"tsdx lint",
