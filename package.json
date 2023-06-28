@@ -1,45 +1,55 @@
 {
-    "version":"0.2.0",
-    "license":"MIT",
-    "main":"dist/index.js",
-    "typings":"dist/index.d.ts",
-    "files":["dist","src"],
-    "engines":{"node":">=10"},
-    "scripts":{
+    "version": "0.2.0",
+    "license": "MIT",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts",
+    "files": [
+        "dist",
+        "src"
+    ],
+    "engines": {
+        "node": ">=10"
+    },
+    "scripts": {
         "start": "start-storybook -p 6006",
-        "build":"tsdx build",
-        "test":"tsdx test --passWithNoTests",
-        "lint":"tsdx lint",
-        "prepare":"tsdx build",
-        "size":"size-limit",
-        "analyze":"size-limit --why",
-        "storybook":"start-storybook -p 6006",
-        "build-storybook":"build-storybook"
+        "build": "tsdx build",
+        "test": "tsdx test --passWithNoTests",
+        "lint": "tsdx lint",
+        "prepare": "tsdx build",
+        "size": "size-limit",
+        "analyze": "size-limit --why",
+        "storybook": "start-storybook -p 6006",
+        "build-storybook": "build-storybook",
+        "release": "auto shipit --base-branch=main"
     },
-    "peerDependencies":{"react":">=16"},
-    "husky":{
-        "hooks":{"pre-commit":"tsdx lint"}
+    "peerDependencies": {
+        "react": ">=16"
     },
-    "prettier":{
-        "printWidth":80,
-        "semi":true,
-        "singleQuote":true,
-        "trailingComma":"es5"
+    "husky": {
+        "hooks": {
+            "pre-commit": "tsdx lint"
+        }
     },
-    "name":"pormadebooks",
-    "author":"Leandro Andrekowicz",
-    "module":"dist/pormadebooks.esm.js",
-    "size-limit":[
+    "prettier": {
+        "printWidth": 80,
+        "semi": true,
+        "singleQuote": true,
+        "trailingComma": "es5"
+    },
+    "name": "pormadebooks",
+    "author": "Leandro Andrekowicz",
+    "module": "dist/pormadebooks.esm.js",
+    "size-limit": [
         {
-            "path":"dist/pormadebooks.cjs.production.min.js",
-            "limit":"10 KB"
+            "path": "dist/pormadebooks.cjs.production.min.js",
+            "limit": "10 KB"
         },
         {
-            "path":"dist/pormadebooks.esm.js",
-            "limit":"10 KB"
+            "path": "dist/pormadebooks.esm.js",
+            "limit": "10 KB"
         }
-        ],
-        "devDependencies": {
+    ],
+    "devDependencies": {
         "@babel/core": "^7.18.10",
         "@size-limit/preset-small-lib": "^8.0.0",
         "@storybook/addon-essentials": "^6.5.10",
@@ -61,6 +71,7 @@
         "typescript": "^4.7.4"
     },
     "dependencies": {
+        "auto": "^10.46.0",
         "styled-components": "^5.3.5"
     }
 }
